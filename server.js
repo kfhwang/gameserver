@@ -21,10 +21,12 @@ server.use(bodyParser.json());
     console.log(req.query);
      res.send("req /md");
  });
+server.post("/rank", (req,res)=>{
 
+})
  server.post("/postscore", (req,res)=>{
-    console.log(req.body)
-
+    console.log(req.body);
+    res.send([{name:"MD", rank:1}]);
  });
  
 server.listen(80);
