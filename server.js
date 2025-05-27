@@ -17,8 +17,14 @@ server.use(bodyParser.json());
 //     res.send("Hello, World!"); //回傳固定內容
 // });
  server.get("/score", function (req, res) { //other pages
-    //save db
+    //url?user=md&score=1000
+    console.log(req.query);
      res.send("req /md");
+ });
+
+ server.post("/postscore", (req,res)=>{
+    console.log(req.body)
+
  });
  
 server.listen(80);
